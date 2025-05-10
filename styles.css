@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+}
+
+
+.container {
+  backdrop-filter: blur(80px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+button {
+  width: 58%;  
+  font-weight: 600;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #00c9a7;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00b09b;
+}
+
+#qrcodeContainer {
+margin-top: 20px;
+  text-align: center;
+}
+
+#qrcodeImage {
+   width: 200px;
+  height: 200px;
+  margin: 15px 0;
+  border: 5px solid #00c9a7;
+  border-radius: 15px;
+  padding: 15px; /* Espaço entre a imagem e a borda */
+  background-color: #ffffff; /* Fundo branco para melhor contraste */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#downloadBtn {
+   width: 58%; 
+   font-weight: 600;
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #0077ff;
+  border-radius: 8px;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#downloadBtn:hover {
+  background-color: #005fd4;
+}
+
+.hidden {
+  display: none;
+}
+
+#resetBtn {
+
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #ff5555;
+  border-radius: 8px;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#resetBtn:hover {
+  background-color: #e64343;
+}
+
+/* Animação fade-in suave */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  #qrcodeImage {
+    width: 150px;
+    height: 150px;
+  }
+  #textInput {
+    width: 100%;
+  }
+  #generateBtn, #resetBtn, #downloadBtn {
+    width: 100%;
+  }
+}
